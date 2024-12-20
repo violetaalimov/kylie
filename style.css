@@ -1,0 +1,489 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; /* Scroll lin între secțiuni */
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: rgba(255, 252, 253, 1);
+}
+
+/* Bara de navigație */
+.navbar {
+  position: fixed; /* Fixează bara de meniu */
+    top: 0; /* Poziționează bara la partea de sus */
+    left: 0; /* Aliniază bara la marginea din stânga */
+    width: 100%; /* Bara ocupă lățimea completă a paginii */
+  display: flex;
+  z-index: 1000; /* Asigură-te că bara de meniu este deasupra altor elemente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* O umbră subtilă pentru aspect */
+  align-items: center;
+  padding: 10px 124px;
+  background-color: #f9dce3;
+  height: 60px;
+}
+
+.navbar .logo {
+  height: 36px;  
+    width: 51px;/* Setează înălțimea logotipurilor */  
+
+   
+}
+
+.navbar .menu {
+  position: absolute; /* Poziționare absolută pentru centrare */
+  left: 50%; /* Mută meniul la 50% din lățimea barei */
+  transform: translateX(-50%); /* Corectează alinierea exact pe mijloc */
+}
+
+.navbar .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar .menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu ul li a:hover {
+  color: #ff5c8d;
+}
+
+/* Secțiunea principală */
+.hero {
+  display: flex;
+  padding: 50px 124px;
+  background-color: rgba(255, 252, 253, 1);
+}
+
+/* Imaginea */
+.hero-image img {
+  width: 1047px; /* Lățimea imaginii */
+  height: 811px; /* Păstrează proporțiile originale */
+  position: absolute;
+  top: 87px; /* Distanța de la marginea de sus */
+  left: 0px; /* Distanța de la marginea stângă */
+  z-index: 1; /* Imaginea se află în fundal */
+}
+
+.hero-content {
+  position: absolute; /* Poziționare absolută pentru a ajusta locația */
+  top: 275px; /* Distanța de 275px de la marginea de sus */
+  right: 139px; /* Distanța de 139px de la marginea din dreapta */
+  z-index: 2; /* Textul apare deasupra imaginii */
+  max-width: 40%; /* Limitează lățimea textului */
+  text-align: left; /* Aliniere la stânga */
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000; /* Text negru */
+  height: 257px;
+  width: 561px;
+  
+}
+
+/* Stilurile pentru titlu */
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 54px; /* Spațiu între titlu și paragrafe */
+  text-align: left;
+}
+
+/* Stilurile pentru paragrafe */
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.5; /* Spațiere între linii */
+  margin-bottom: 54px;
+  text-align: left;
+}
+
+/* Stilurile pentru buton */
+.hero-content .btn {
+  
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #000; /* Fundal negru */
+  color: #fff; /* Text alb */
+  text-decoration: none; /* Elimină sublinierea */
+  border-radius: 6px; /* Colțuri rotunjite */
+  transition: background-color 0.3s ease; /* Animație pentru hover */
+  align-self:;
+}
+
+.hero-content .btn:hover {
+  background-color: #555; /* Fundal gri închis la hover */
+}
+
+/* Secțiunea Shop */
+.shop {
+  margin-top: 921px; /* Distanța de la marginea imaginii */
+  background-color: rgba(255, 252, 253, 1); /* Fundal deschis pentru secțiune */
+  padding: 60px 0; /* Spațiu interior pe sus și jos */
+}
+
+/* Containerele Shop */
+.shop-container {
+  width: 100%;
+  max-width: 1184px; /* Lățimea maximă a containerului */
+  margin: 0 auto; /* Aliniază containerul pe centru */
+  text-align: center; /* Aliniaza textul la mijloc */
+}
+
+/* Titlu Shop */
+.shop-container h2 {
+  font-size: 32px; /* Dimensiunea textului */
+  font-weight: bold;
+  color: #000; /* Culoare text negru */
+  margin-bottom: 40px; /* Distanța de 40px sub titlu */
+}
+
+/* Containerul cu iconițe și chenare */
+.shop-items {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Distribuie spațiu între elemente */
+  align-items: center;
+  background-color: rgba(255, 228, 234, 1); /* Fundal roz */
+  width: 1184px;
+  height: 529px;
+  margin: 0 auto;
+  padding: 0 92.5px; /* Distanță de 92.5px pe stânga și dreapta */
+  border-radius: 6px;
+}
+
+/* Iconițele cu săgeți */
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centrare verticală */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-container img {
+  width: 11px;
+  height: 25px;
+}
+.arrow-container.left {
+  left: -51px; /* Poziționează săgeata la 31px distanță față de marginea stângă */
+}
+
+/* Iconița din dreapta */
+.arrow-container.right {
+  right: -51px; /* Poziționează săgeata la 31px distanță față de marginea dreaptă */
+}
+
+
+
+
+/* Chenarele albe */
+.white-box {
+  background-color: #fff; /* Fundal alb */
+  width: 266px; /* Lățimea chenarelor */
+  height: 393px; /* Înălțimea chenarelor */
+
+  display: flex;
+  flex-direction: column; /* Așează conținutul pe verticală (imagine și text) */
+  align-items: center; /* Centrează elementele pe orizontală */
+  padding: 20px; /* Adaugă spațiu interior */
+}
+/* Distanța între chenare */
+.white-box + .white-box {
+  margin-left: 104px; /* Distanța de 104px între chenare */
+}
+
+
+/* Imaginea din fiecare chenar */
+.product-image {
+  width: 100%; /* Imaginea va ocupa întreaga lățime a chenarului */
+  height: auto; /* Menține proporțiile imaginii */
+  margin-bottom: 24px; /* Distanță între imagine și text */
+}
+
+/* Textul sub imagine */
+.product-text {
+  font-size: 20px; /* Dimensiune text */
+  color: #000000; /* Culoare text */
+  text-align: center; /* Aliniaza textul la centru */
+  margin-top: 24px; /* Distanță între text și marginea de sus */
+}
+
+.shop-container {
+  position: relative; /* Permite poziționarea relativă a iconiței */
+}
+
+.icon-container {
+  position: absolute; /* Permite poziționarea exactă a iconiței */
+  top: 560px; /* Plasează iconița 11px mai sus de marginea de jos a chenarelor albe */
+  left: 50%; /* Centrează iconița pe orizontală */
+  transform: translateX(-50%); /* Centrează iconița perfect pe orizontală */
+}
+
+/* Dimensiunea și stilul iconiței */
+.product-icon {
+  width: 46px; /* Lățimea iconiței */
+  height: 46px; /* Înălțimea iconiței */
+}
+
+.new-arrival {
+  margin-top: 100px; 
+}
+.new-arrival-container {
+  padding: 0 76px; /* Spațiu interior pentru margini */
+}
+
+.section-title {
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 103px; /* Distanță față de elementele de dedesubt */
+}
+.pink-box1 {
+  background-color: rgba(255, 228, 234, 1); /* Roz deschis */
+  width: 1184px;
+  height: 497px;
+  padding: 20px;
+  position: relative; /* Permite poziționarea absolută a imaginii */
+  margin: 0 auto; 
+}
+
+.image-container1 {
+  position: absolute;
+  right: 48px; /* La marginea dreaptă a chenarului roz */
+  top: -107px; /* Margine de sus */
+}
+.left-container {
+  width: 50%; /* Ocupă jumătate din lățimea chenarului roz */
+  text-align: center; /* Centrează textul și butonul */
+}
+
+
+
+/* Subtitlu cu distanța de 290px față de titlu */
+.sub-title1 {
+  text-align: left; 
+  padding-left: 120px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 187px; /* Distanța față de titlul secțiunii */
+    margin-bottom: 17px; /* Distanța față de textul de dedesubt */
+    display: block; /* Asigură că subtitlul este pe un rând nou */
+}
+
+/* Textul */
+.description-text {
+  padding-left: 170.5px;
+    font-size: 16px;
+    margin-bottom: 17px; /* Distanța față de butonul de dedesubt */
+    display: block; /* Asigură că textul este pe un rând nou */
+}
+
+/* Buton */
+.btn {
+  margin-left: 161px; 
+  width: 147px; /* Lățimea butonului */
+    height: 41px; /* Înălțimea butonului */
+    padding: 12px 24px;
+    background-color: #000000; /* Roz închis */
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    display: block; /* Asigură că butonul este pe un rând nou */
+    text-decoration: none; 
+}
+/* Containerul pentru secțiunea Info */
+.info {
+  margin-left: 153px; /* Distanța față de marginea imaginii din secțiunea anterioară */
+}
+
+/* Containerul general pentru conținut */
+.container {
+  width: 100%;
+}
+
+/* Titlul secțiunii Info */
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 240px; /* Distanța față de containerul anterior */
+  margin-bottom: 90px; /* Distanța față de următorul element */
+}
+
+/* Containerul alb care conține cele două chenare roz */
+.white-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Distribuie spațiu între elemente */
+  align-items: center;
+  width: 1184px;
+  height: 538px;
+  background-color: white;
+  margin-top: 90px; /* Distanța față de titlul secțiunii */
+  gap: 148px; /* Distanța dintre cele două chenare roz */
+  padding: 0 198px; /* Aliniere față de marginea stângă și dreaptă */
+}
+
+/* Chenarele roz */
+.pink-box {
+  width: 483px;
+  height: 500px;
+  background-color: rgba(255, 228, 234, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  
+}
+
+/* Pentru imagine */
+.image-container img {
+  width: 485px;
+  height: 308px;
+  margin-left: -70px;
+  margin-top: -38px;
+
+}
+.sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Textul explicativ */
+.text {
+  margin-top: 19px;
+  font-size: 16px;
+  margin-bottom: 70px;
+  margin-left: 20px;
+}
+
+/* Buton secundar */
+.btn-secondary {
+  margin-top: 17px;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+/* Secțiunea Contact */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+/* Containerul extern */
+.container-outer {
+  width: 1184px;
+  height: 482px;
+  background-color: rgba(255, 244, 248, 1); /* Roz palid */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Containerul intern cu dreptunghiul roz închis */
+.container-inner {
+  width: 424px;
+  height: 329px;
+  background-color: rgba(255, 228, 234, 1); /* Roz închis */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Titlul secțiunii */
+.contact-title {
+  font-size: 32px;
+  margin-bottom: 11px; /* Distanța față de inputuri */
+}
+
+/* Inputurile */
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 22px; /* Distanța între inputuri */
+  border: 1px solid rgba(255, 252, 253, 1);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+/* Textul explicativ sub inputuri */
+.contact-text {
+  font-size: 14px;
+  color: #000000;
+  margin-top: 11px; /* Distanța față de buton */
+}
+
+/* Butonul de trimitere */
+.contact-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color:black; /* Fundal transparent */
+  border: none;
+  color: rgba(255, 252, 253, 1);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.contact-btn:hover {
+  background-color:  rgba(255, 252, 253, 1); /* Culoare mai închisă la hover */
+  color:#f8bfd7; 
+}
+.footer {
+  width: auto;
+  height: 300px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.interactive-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.interactive-links a:hover {
+  text-decoration: underline;
+}
+.interactive-links2 a {
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 10px;
+  font-size: 15px;
+}
+.first-line {
+  display: flex;
+  gap: 58px;
+  justify-content: center;
+}
